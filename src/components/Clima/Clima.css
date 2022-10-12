@@ -5,7 +5,7 @@
     border-radius: 0px 20px 0px 20px;
     padding: 25px;
     border: 1px solid grey;
-    background-color: #AEBDCA;
+    background-color: #5CB8E4;
   }
   .clima-container:hover {
     box-shadow: 15px 15px 2px 1px rgba(0, 0, 0, 0.2);
@@ -14,7 +14,7 @@
   .clima {
     display: flex;
     flex-direction: column;
-    background-color: #F5EFE6;
+    background-color: #F2F2F2;
   color: black;
   }
   
@@ -68,6 +68,6 @@
   
   .btn-see-more:hover {
     cursor: pointer;
-    background-color: #7895B2;
+    background-color: black;
     color: #fff;
   }
