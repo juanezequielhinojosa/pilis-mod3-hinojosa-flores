@@ -11,6 +11,7 @@ const ClimaDisplay = () => {
   return (
     <div className="palette-display-container">
       <div className="palette-display-card">
+      <img src={c.imagen} alt="" />
         <h1 className="palette-display-name">{c.name}</h1>
         <h1 className="palette-display-name">{c.latitud}</h1>
         <div className="tag-d-container"></div>

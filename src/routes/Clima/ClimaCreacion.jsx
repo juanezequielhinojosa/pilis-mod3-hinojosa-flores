@@ -23,6 +23,7 @@ const ClimaCreacion = () => {
       name: data.cityName,
       latitud:data.latitud,
       longitud:data.longitud,
+      imagen:data.imagen,
     }
     console.log('tarjetaNew');
     console.log(tarjetaNew);
@@ -65,6 +66,15 @@ const ClimaCreacion = () => {
           })}
         />
         <p>{errors.longitud?.message}</p>
+        <input
+          className='input-palette-name-form'
+          type='text'
+          placeholder='ingresa una postal'
+          {...register('imagen', {
+            required: 'Debe ingresar una postal',
+          })}
+        />
+        <p>{errors.imagen?.message}</p>
         <button className='btn-form' type='submit'>
           Crear Tarjeta
         </button>
