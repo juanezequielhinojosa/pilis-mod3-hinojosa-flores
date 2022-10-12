@@ -1,14 +1,14 @@
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { ClimasContext } from '../../context/ClimasContext';
-import { IdContext } from '../../context/idContext';
+import { ClimasContext } from '../../contexts/ClimasContext';
+import { IdContext } from '../../contexts/IdContext';
 import './ClimaCreacion.css';
 import swal from 'sweetalert'
 
 const ClimaCreacion = () => {
   const {idTarjeta, setIdTarjeta}=useContext(IdContext)
-  const { listaClima, setListaClimas } = useContext(ClimasContext)
+  const { listaClimas, setListaClimas } = useContext(ClimasContext)
  //const [idTarjeta,setIdTarjeta]=useState('1')
   const {register,handleSubmit,formState: { errors }} = useForm();
  const navigate = useNavigate()
@@ -26,7 +26,7 @@ const ClimaCreacion = () => {
     }
     console.log('tarjetaNew');
     console.log(tarjetaNew);
-    setListaClimas([...listaClima,tarjetaNew])
+    setListaClimas([...listaClimas,tarjetaNew])
     swal({
       text:'Ubicacion creada con exito',
       icon:'success'

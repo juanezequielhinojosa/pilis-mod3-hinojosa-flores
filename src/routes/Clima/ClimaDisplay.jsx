@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ClimasContext } from "../../context/ClimasContext";
+import { ClimasContext } from "../../contexts/ClimasContext";
 import "./ClimaDisplay.css";
 
 const ClimaDisplay = () => {
   const { id } = useParams();
-  const { listaClima } = useContext(ClimasContext);
-  const [c] = listaClima.filter((clima) => clima.id === Number(id));
+  const { listaClimas } = useContext(ClimasContext);
+  const [c] = listaClimas.filter((clima) => clima.id === Number(id));
 
   return (
     <div className="palette-display-container">

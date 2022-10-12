@@ -2,14 +2,14 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getClima } from "../../service";
-import { ClimasContext } from "../../context/ClimasContext";
+import { ClimasContext } from "../../contexts/ClimasContext";
 import swal from "sweetalert";
 import "./Clima.css";
 
 const Clima = ({ clima }) => {
   const [items, setItems] = useState({});
   const [datos, setDatos] = useState({});
-  const { listaClima, setListaClimas } = useContext(ClimasContext);
+  const { listaClimas, setListaClimas } = useContext(ClimasContext);
   const { id, name, latitud, longitud } = clima;
   const { temperature, windspeed } = datos;
   useEffect(() => {
@@ -29,9 +29,9 @@ const Clima = ({ clima }) => {
       buttons: ["No", "Si"],
     }).then((respuesta) => {
       if (respuesta) {
-        const listaActualizada = listaClima.filter((clima) => clima.id !== id);
+        const listaActualizada = listaClimas.filter((clima) => clima.id !== id);
         setListaClimas(listaActualizada);
-        // setListaClimas(listaClima.filter((clima) => clima.id !== id));
+        // setListaClimas(listaClimas.filter((clima) => clima.id !== id));
         swal({ text: "Ubicacion eliminada con exito", icon: "success" });
       }
     });

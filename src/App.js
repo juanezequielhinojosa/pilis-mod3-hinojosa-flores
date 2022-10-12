@@ -5,7 +5,7 @@ import Home from './routes/Home/Home';
 import Login from './routes/Login/Login.jsx'
 import ClimaCreacion from './routes/Clima/ClimaCreacion';
 import ClimaDisplay from './routes/Clima/ClimaDisplay';
-import { ClimasContext } from './context/ClimasContext';
+import { ClimasContext } from './contexts/ClimasContext';
 import { useEffect,useContext } from 'react';
 import { listaPredefinida } from './listaPredefinida';
 

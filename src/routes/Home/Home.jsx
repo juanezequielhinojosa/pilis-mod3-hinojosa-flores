@@ -1,15 +1,16 @@
 import "./Home.css";
 import { useContext } from "react";
-import { ClimasContext } from "../../context/ClimasContext";
-import { FiltersContext } from "../../context/FiltersContext";
+import { ClimasContext } from "../../contexts/ClimasContext";
+import { FiltrosContext } from "../../contexts/FiltrosContext";
 import Climas from "../../components/Clima/Climas";
-import Busqueda from "../../components/Busqueda";
+//import Busqueda from "../../components/Busqueda";
+import Buscador from "../../components/Buscador/Buscador";
 
 const Home = () => {
-  const { listaClima } = useContext(ClimasContext);
-  const { filters } = useContext(FiltersContext);
+  const { listaClimas } = useContext(ClimasContext);
+  const { filters } = useContext(FiltrosContext);
 
-  const listaClimasFiltrados = listaClima.filter((tarjetaNew) => {
+  const listaClimasFiltrados = listaClimas.filter((tarjetaNew) => {
     //console.log(filters.searchField)
     if (filters.searchField === "") {
       return true;
@@ -27,7 +28,7 @@ const Home = () => {
   });
   return (
     <>
-      <Busqueda />
+      <Buscador />
       <Climas climas={listaClimasFiltrados} />
     </>
   );

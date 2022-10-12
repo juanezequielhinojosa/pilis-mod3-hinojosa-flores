@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { UserProvider } from "./context/UserContext";
-import { ClimasProvider } from "./context/ClimasContext";
-import { IdProvider } from "./context/idContext";
-import { FiltrosProvider } from "./context/FiltrosContext";
+import { UserProvider } from "./contexts/UserContext";
+import { ClimasProvider } from "./contexts/ClimasContext";
+import { IdProvider } from "./contexts/IdContext";
+import { FiltrosProvider } from "./contexts/FiltrosContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

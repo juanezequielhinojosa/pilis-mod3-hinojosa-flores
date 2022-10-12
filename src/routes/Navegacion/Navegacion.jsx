@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { UserContext } from "../../context/UserContext";
-import { ClimasContext } from "../../context/ClimasContext";
-import { SecionContext } from "../../context/SecionContext";
+import { UserContext } from "../../contexts/UserContext";
+import { ClimasContext } from "../../contexts/ClimasContext";
+//import { SecionContext } from "../../context/SecionContext";
 import logo from "../../assets/logo.jpg";
 import "./Navegacion.css";
 import { listaPredefinida } from "../../listaPredefinida";
@@ -10,8 +10,8 @@ import swal from "sweetalert";
 
 const Navegacion = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
-  const { listaClima, setListaClimas } = useContext(ClimasContext);
-  const { listaSeciones, setListaSeciones } = useContext(SecionContext);
+  const { listaClimas, setListaClimas } = useContext(ClimasContext);
+  const [listaSeciones, setListaSeciones] = useState([]);
   const [contador, setContador] = useState(1);
   useEffect(() => {
     const userStored = JSON.parse(localStorage.getItem("currentUser"));
@@ -21,7 +21,6 @@ const Navegacion = () => {
       if (listaSeciones.length !== 0) {
         console.log(listaSeciones);
         if (listaSeciones.name == currentUser.username) {
-          console.log("genial");
           console.log(listaSeciones.ubicaciones);
           setListaClimas(listaSeciones.ubicaciones);
         }
@@ -35,7 +34,7 @@ const Navegacion = () => {
     const informacionDeUsuario = {
       id: contador,
       name: currentUser.username,
-      ubicaciones: listaClima,
+      ubicaciones: listaClimas,
     };
     console.log(informacionDeUsuario);
     setContador(contador + 1);

@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import { ClimasContext } from "../context/ClimasContext";
-import { FiltersContext } from "../context/FiltersContext";
+import { ClimasContext } from "../../contexts/ClimasContext";
+import { FiltrosContext } from "../../contexts/FiltrosContext";
 
-const Busqueda = () => {
+const Buscador = () => {
   const [busqueda, setBusqueda] = useState("");
-  const { setFilters } = useContext(FiltersContext);
+  const { setFilters } = useContext(FiltrosContext);
   const { listaClima, setListaClimas } = useContext(ClimasContext);
   const [listaAuxiliar, setListaAuxiliar] = useState([]);
 
@@ -30,4 +30,4 @@ const Busqueda = () => {
     </>
   );
 };
-export default Busqueda;
+export default Buscador;
