@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { ClimasContext } from "../../contexts/ClimasContext";
 import { FiltrosContext } from "../../contexts/FiltrosContext";
 import { FaSearch } from "react-icons/fa";
+import "./Buscador.css";
 
 const Buscador = () => {
   const [busqueda, setBusqueda] = useState("");
@@ -18,12 +19,15 @@ const Buscador = () => {
     <>
       <div className="main-container">
         {/* <button onClick={() => setListaAuxiliar(listaClima)}>ok</button> */}
+        <div className="icon">
         <FaSearch/>
+        </div>
         {
           <div className="buscador-container">
             <input
+            className="buscador"
               value={busqueda}
-              placeholder="ingrese el nombre de la ciudad"
+              placeholder="  Ingrese el nombre de la ciudad"
               onChange={handleChange}
             />
           </div>
