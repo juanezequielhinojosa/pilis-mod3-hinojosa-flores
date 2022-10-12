@@ -4,8 +4,7 @@ import './Climas.css'
 
 const Climas = ({climas}) => {
  return (
-   <div className='grid'>
-    
+   <div className='grid'>    
      {
       climas.map(c=>
         <Clima

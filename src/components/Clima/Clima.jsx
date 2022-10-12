@@ -39,19 +39,24 @@ const Clima = ({ clima }) => {
   };
 
   return (
-    <div>
+    
+    <div className='clima-container'>
+      <div className='clima'>
       <h1>{id}</h1>
       <h1>{name}</h1>
-      <h1>{items.latitude}</h1>
-      <h1>{items.longitude}</h1>
-      <h1>{temperature} °C</h1>
-      <h1>{windspeed} Km/h</h1>
+      <h3>{items.latitude}</h3>
+      <h3>{items.longitude}</h3>
+      <h2>{temperature} °C</h2>
+      <h2>{windspeed} Km/h</h2>
+      </div>
+
+      <div className='fav'>
       <FaTrashAlt onClick={() => eliminarTarjeta(id)}/>
       {/* <button onClick={() => eliminarTarjeta(id)}>Eliminar</button> */}
       <Link className="btn-see-more" to={`/clima/${id}`}>
         Ver más
       </Link>
-      
+      </div>
     </div>
   );
 };
