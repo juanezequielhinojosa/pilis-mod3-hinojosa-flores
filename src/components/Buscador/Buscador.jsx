@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { ClimasContext } from "../../contexts/ClimasContext";
 import { FiltrosContext } from "../../contexts/FiltrosContext";
+import { FaSearch } from "react-icons/fa";
 
 const Buscador = () => {
   const [busqueda, setBusqueda] = useState("");
@@ -16,7 +17,8 @@ const Buscador = () => {
   return (
     <>
       <div className="main-container">
-        <button onClick={() => setListaAuxiliar(listaClima)}>ok</button>
+        {/* <button onClick={() => setListaAuxiliar(listaClima)}>ok</button> */}
+        <FaSearch/>
         {
           <div className="buscador-container">
             <input

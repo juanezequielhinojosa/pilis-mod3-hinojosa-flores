@@ -1,4 +1,5 @@
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getClima } from "../../service";
@@ -45,10 +46,12 @@ const Clima = ({ clima }) => {
       <h1>{items.longitude}</h1>
       <h1>{temperature} °C</h1>
       <h1>{windspeed} Km/h</h1>
-      <button onClick={() => eliminarTarjeta(id)}>Eliminar</button>
+      <FaTrashAlt onClick={() => eliminarTarjeta(id)}/>
+      {/* <button onClick={() => eliminarTarjeta(id)}>Eliminar</button> */}
       <Link className="btn-see-more" to={`/clima/${id}`}>
         Ver más
       </Link>
+      
     </div>
   );
 };
