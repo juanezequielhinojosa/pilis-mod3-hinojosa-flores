@@ -45,7 +45,7 @@ const Clima = ({ clima }) => {
       <h3>{id}</h3>
       <h1>{name}</h1>     
       <h2>Temp: {temperature} °C</h2>
-      <h2>Vel. viento: {windspeed} Km/h</h2>
+      <h3>Vel. viento: {windspeed} Km/h</h3>
       <h3>Lat: {items.latitude}</h3>
       <h3>Long: {items.longitude}</h3>
       </div>
