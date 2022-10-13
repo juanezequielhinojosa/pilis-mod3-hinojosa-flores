@@ -21,7 +21,8 @@ const Login = () => {
 
   return (
     <div className="sign-in-container">
-      <h2>Ingresa con tu usuario y contraseña</h2>
+      <div className="form-container">
+         <h2>Ingresa tus Datos</h2>
       <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-form"
@@ -45,6 +46,8 @@ const Login = () => {
           Iniciar Sesión
         </button>
       </form>
+      </div>
+     
     </div>
   );
 };
