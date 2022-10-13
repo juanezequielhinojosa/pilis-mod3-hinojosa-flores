@@ -30,6 +30,13 @@
     text-decoration: none;
     padding: 10px 15px;
     cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .nav-link:hover{
+    background-color: #5CB8E4;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
   }
   
   .sign-in {
@@ -37,3 +44,6 @@
     border-radius: 5px;
   }
   
+  .sign-in:hover{
+    border: 1.5px solid grey;
+  }

@@ -9,6 +9,7 @@
   }
   .clima-container:hover {
     box-shadow: 15px 15px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
   }
   
   .clima {
@@ -17,6 +18,7 @@
     background-color: #F2F2F2;
   color: black;
   border-radius: 0px 20px 0px 20px;
+  border: 0.5px solid grey;
   }
   
  
@@ -71,4 +73,7 @@
     cursor: pointer;
     background-color: #5CB8E4;
     color: black;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
   }
+
+  
