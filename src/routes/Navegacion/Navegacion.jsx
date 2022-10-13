@@ -56,6 +56,7 @@ const Navegacion = () => {
           <img src={logo} alt="Logo" className="logo" />
         </Link>
         <div className="nav-links-container">
+          <h4>
           {currentUser ? (
             <Link className="nav-link" to="/ubicacion/create">
               Nueva Ciudad{" "}
@@ -76,6 +77,7 @@ const Navegacion = () => {
               Iniciar sesión
             </Link>
           )}
+          </h4>
         </div>
       </div>
       <Outlet />
