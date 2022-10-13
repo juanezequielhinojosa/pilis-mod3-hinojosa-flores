@@ -39,7 +39,8 @@ const UbicacionCreacion = () => {
 
   return (
     <div className="main-container">
-      <span>Crea una nueva Ubicacion</span>
+      <div className="form-container">
+      <h1>Crea una nueva Ubicacion</h1>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-name-form"
@@ -81,6 +82,8 @@ const UbicacionCreacion = () => {
           Crear Ubicacion
         </button>
       </form>
+      </div>
+      
     </div>
   );
 };
