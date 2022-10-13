@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { UbicacionesContext } from "../../contexts/UbicacionesContext";
 import { IdContext } from "../../contexts/IdContext";
-import "./UbicacionCreacion.css";
 import swal from "sweetalert";
 
 //ESTE COMPONENTE ES UN FORMULARIO QUE PERMITE CREAR UNA UBICACION

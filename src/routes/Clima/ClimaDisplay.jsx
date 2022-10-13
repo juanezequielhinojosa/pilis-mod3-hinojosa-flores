@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import { UbicacionesContext } from "../../contexts/UbicacionesContext";
-import "./ClimaDisplay.css";
 
 //ESTE COMPONENTE PERMITE VISUALIZAR DE FORMA MAS DETALLADA EL CLIMA DE UNA UBICACION
 const ClimaDisplay = () => {
