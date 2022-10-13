@@ -51,7 +51,7 @@ const Navegacion = () => {
   };
   return (
     <>
-      <div className="navigation">
+      <div className="navegacion">
         <Link className="logo-container" to="/">
           <img src={logo} alt="Logo" className="logo" />
         </Link>
@@ -73,7 +73,7 @@ const Navegacion = () => {
               </Link>
             </span>
           ) : (
-            <Link className="nav-link sign-in" to="/login">
+            <Link className="nav-link" to="/login">
               Iniciar sesión
             </Link>
           )}
