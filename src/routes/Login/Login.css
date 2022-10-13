@@ -12,9 +12,9 @@
     display: block;
     width: 100%;
     border: none;
-    border-radius: 0;
+    border-radius: 5px;
     border-bottom: 1px solid #000;
-    margin: 25px 0;
+   margin-top: 30px;
   }
   
   .input-form:focus {
@@ -30,12 +30,21 @@
     line-height: 50px;
     padding: 0 35px 0 35px;
     font-size: 15px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-weight: bolder;
     border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    border: 1px solid black;
   }
+
+  .btn-form:hover{
+    cursor: pointer;
+    background-color: #5CB8E4;
+    color: black;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
