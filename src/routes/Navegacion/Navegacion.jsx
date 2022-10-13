@@ -63,18 +63,18 @@ const Navegacion = () => {
             </Link>
           ) : (
             <span className="nav-link" onClick={() => Alerta()}>
-              Agregar Ciudad
+              Agregar ciudad
             </span>
           )}
           {currentUser ? (
             <span className="nav-link" onClick={handleSignOut}>
-              <Link className="nav-link sign-in" to="/">
-                Cerrar Secion
+              <Link className="nav-link close" to="/">
+                Cerrar sesión
               </Link>
             </span>
           ) : (
             <Link className="nav-link sign-in" to="/login">
-              Iniciar Sesión
+              Iniciar sesión
             </Link>
           )}
         </div>
