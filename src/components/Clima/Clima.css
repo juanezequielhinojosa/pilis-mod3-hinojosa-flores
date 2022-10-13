@@ -5,18 +5,18 @@
     border-radius: 0px 20px 0px 20px;
     padding: 25px;
     border: 1px solid grey;
-    background-color: #5CB8E4;
+    background-color: #06d6a0;
   }
   .clima-container:hover {
-    box-shadow: 15px 15px 2px 1px rgba(0, 0, 0, 0.2);
-    border: 2px solid black;
+    box-shadow: 15px 15px 2px 1px #ffc43d;
+    border: 2px solid #ef476f;
   }
   
   .clima {
     display: flex;
     flex-direction: column;
-    background-color: #F2F2F2;
-  color: black;
+    background-color: #1b9aaa;
+  color: white;
   border-radius: 0px 20px 0px 20px;
   border: 0.5px solid grey;
   }
