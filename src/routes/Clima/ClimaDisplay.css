@@ -1,72 +1,53 @@
-.palette-display-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-  }
-  
-  .palette-display-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 5px;
-    padding: 20px;
-  }
-  
-  .palette-display-name {
-    margin-bottom: 10px;
-  }
-  
-  .hex-code-d {
-    font-size: 18px;
-    border-radius: 10px;
-    padding: 10px;
-    color: #fff;
-    transition: background-color 0.5s ease;
-  }
-  
-  .color-d {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    height: 100px;
-    width: 350px;
-  }
-  
-  .color-d:hover .hex-code-d {
-    background-color: #5e5e5e33;
-  }
-  
-  .c0-d{
-    border-radius: 10px 10px 0 0;
-  }
-  
-  .c3-d{
-    border-radius: 0 0 10px 10px;
-  }
-  
-  .btn-back {
-    margin-top: 30px;
-    width: 200px;
-    text-decoration: none;
-    border: 1px solid #e9e9e9;
-    padding: 10px;
-    border-radius: 5px;
-    color: #000;
-  }
-  
-  .btn-back:hover {
-    cursor: pointer;
-    background-color: rgb(37, 37, 37);
-    color: #fff;
-  }
-  
-  .tag-d-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 20px;
-    width: 350px;
-  }
+.contenedor-principal {
+  width: 900px;
+  height: 450px;
+  margin: 40px 0px 50px 200px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 3px 13px 1px black;
+}
+img {
+  width: 60%;
+  height: 100%;
+}
+.contendor-texto {
+  width: 40%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.contenedor-datos {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nombre-ciudad {
+  margin-bottom: 60px;
+  font-size: 3rem;
+}
+
+.btn-back {
+  background-color: rgb(71, 218, 174);
+  margin-top: 30px;
+  width: 200px;
+  text-decoration: none;
+  border: 1px solid #e9e9e9;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000;
+}
+
+.btn-back:hover {
+  cursor: pointer;
+  background-color: rgb(243, 76, 187);
+  color: #fff;
+}
