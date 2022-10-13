@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
 import { UbicacionesContext } from "../../contexts/UbicacionesContext";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.png";
 import "./Navegacion.css";
 import { listaPredefinida } from "../../listaPredefinida";
 import swal from "sweetalert";
