@@ -10,7 +10,6 @@ import swal from "sweetalert";
 const UbicacionCreacion = () => {
   const { idTarjeta, setIdTarjeta } = useContext(IdContext);
   const { listaUbicaciones, setListaUbicaciones } = useContext(UbicacionesContext);
-  //const [idTarjeta,setIdTarjeta]=useState('1')
   const {
     register,
     handleSubmit,
@@ -22,7 +21,6 @@ const UbicacionCreacion = () => {
     console.log(data);
     setIdTarjeta(idTarjeta + 1);
     const nuevaUbicacion = {
-      // id: listaUbicaciones.length + 1,
       id: idTarjeta,
       name: data.cityName,
       latitud: data.latitud,

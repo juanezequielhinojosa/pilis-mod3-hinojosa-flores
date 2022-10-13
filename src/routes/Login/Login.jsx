@@ -15,9 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    //localStorage.setItem("currentUser", JSON.stringify(data));
     setCurrentUser(data);
-    // console.log(data);
     navigate("/");
   };
 

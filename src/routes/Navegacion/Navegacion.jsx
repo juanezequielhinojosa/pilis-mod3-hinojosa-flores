@@ -1,47 +1,46 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
 import { UbicacionesContext } from "../../contexts/UbicacionesContext";
-//import { SecionContext } from "../../context/SecionContext";
 import logo from "../../assets/logo.jpg";
 import "./Navegacion.css";
 import { listaPredefinida } from "../../listaPredefinida";
 import swal from "sweetalert";
 
+//ESTE COMPONENTE PERMITE LA NAVEGACION DE NUESTRA APLICACION
 const Navegacion = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
-  const { listaUbicaciones, setListaUbicaciones } = useContext(UbicacionesContext);
-  const [listaSeciones, setListaSeciones] = useState([]);
-  const [contador, setContador] = useState(1);
+  const { listaUbicaciones, setListaUbicaciones } =
+    useContext(UbicacionesContext);
+
+  //CADA VEZ QUE SE ACTUALIZA EL ESTADO GLOBAL DE USUARIO ,CAMBIA LA CONFIGURCION DE NUETRA NAVEGACION
   useEffect(() => {
-    const userStored = JSON.parse(localStorage.getItem("currentUser"));
-    console.log({ userStored });
+    const secionStored = JSON.parse(localStorage.getItem("secionDeUsuario"));
+    console.log({ secionStored });
     console.log(currentUser);
-    if (currentUser !== null) {
-      if (listaSeciones.length !== 0) {
-        console.log(listaSeciones);
-        if (listaSeciones.name == currentUser.username) {
-          console.log(listaSeciones.ubicaciones);
-          setListaUbicaciones(listaSeciones.ubicaciones);
-        }
+    if (currentUser !== null && secionStored !== null) {
+      if (currentUser.username === secionStored.name) {
+        setListaUbicaciones(secionStored.ubicaciones);
       } else {
-        // setListaUbicaciones(listaPredefinida)
+        setListaUbicaciones(listaPredefinida);
       }
+    } else {
+      setListaUbicaciones(listaPredefinida);
     }
   }, [currentUser]);
 
   const handleSignOut = () => {
     const informacionDeUsuario = {
-      id: contador,
       name: currentUser.username,
       ubicaciones: listaUbicaciones,
     };
     console.log(informacionDeUsuario);
-    setContador(contador + 1);
-    setListaSeciones(informacionDeUsuario);
+    localStorage.setItem(
+      "secionDeUsuario",
+      JSON.stringify(informacionDeUsuario)
+    );
     setCurrentUser(null);
     setListaUbicaciones(listaPredefinida);
-    console.log(listaSeciones);
   };
   const Alerta = () => {
     swal(
