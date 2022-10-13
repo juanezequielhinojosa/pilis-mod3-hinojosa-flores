@@ -38,11 +38,11 @@ const UbicacionCreacion = () => {
   };
 
   return (
-    <div className="palette-new-container">
+    <div className="main-container">
       <span>Crea una nueva Ubicacion</span>
-      <form className="palette-form" onSubmit={handleSubmit(onSubmit)}>
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="input-palette-name-form"
+          className="input-name-form"
           type="text"
           placeholder="Nombre de la ciudad"
           {...register("cityName", {
@@ -51,7 +51,7 @@ const UbicacionCreacion = () => {
         />
         <p>{errors.cityName?.message}</p>
         <input
-          className="input-palette-name-form"
+          className="input-name-form"
           type="text"
           placeholder="latitud"
           {...register("latitud", {
@@ -60,7 +60,7 @@ const UbicacionCreacion = () => {
         />
         <p>{errors.latitud?.message}</p>
         <input
-          className="input-palette-name-form"
+          className="input-name-form"
           type="text"
           placeholder="longitud"
           {...register("longitud", {
@@ -69,7 +69,7 @@ const UbicacionCreacion = () => {
         />
         <p>{errors.longitud?.message}</p>
         <input
-          className="input-palette-name-form"
+          className="input-name-form"
           type="text"
           placeholder="ingresa una postal"
           {...register("imagen", {
@@ -78,7 +78,7 @@ const UbicacionCreacion = () => {
         />
         <p>{errors.imagen?.message}</p>
         <button className="btn-form" type="submit">
-          Crear Tarjeta
+          Crear Ubicacion
         </button>
       </form>
     </div>
