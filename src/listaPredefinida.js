@@ -40,16 +40,9 @@ export const listaPredefinida = [
     imagen:
       "https://www.nyhabitat.com/sp/blog/wp-content/uploads/2017/06/Consejos-de-primera-mejores-cosas-Londres-primavera-Big-Ben-London-Eye-vistas-rio-T%C3%A1mesis.jpg"
   },
+ 
   {
     id: 6,
-    name: "Londres",
-    latitud: 51.528308,
-    longitud: -0.3817765,
-    imagen:
-      "https://www.nyhabitat.com/sp/blog/wp-content/uploads/2017/06/Consejos-de-primera-mejores-cosas-Londres-primavera-Big-Ben-London-Eye-vistas-rio-T%C3%A1mesis.jpg"
-  },
-  {
-    id: 7,
     name: "Roma",
     latitud: 41.9097306,
     longitud: 12.2558141,
@@ -58,11 +51,19 @@ export const listaPredefinida = [
   },
   
   {
-    id: 8,
+    id: 7,
     name: "Seúl",
     latitud: 37.563525,
     longitud: 126.6939001,
     imagen:
       "https://sites.google.com/site/coreadelsur2014/_/rsrc/1416613414568/ciudades/seul/seul%2C-ciudad-de-noche%2C-calle%2C-hdr-159062.jpg",
+  },
+  {
+    id: 8,
+    name: "Hong Kong",
+    latitud: 22.5271707,
+    longitud: 113.7805593,
+    imagen:
+      "https://static.dw.com/image/61713800_6.jpg"
   },
 ];

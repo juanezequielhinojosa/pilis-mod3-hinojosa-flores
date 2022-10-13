@@ -45,7 +45,6 @@ const Clima = ({ ubicacion }) => {
     
     <div className='clima-container'>
       <div className='clima'>
-      <h3>{id}</h3>
       <h1>{name}</h1>     
       <h2>Temp: {temperature} °C</h2>
       <h3>Vel. viento: {windspeed} Km/h</h3>
