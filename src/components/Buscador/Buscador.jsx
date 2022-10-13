@@ -17,9 +17,7 @@ const Buscador = () => {
   return (
     <>
       <div className="main-container">
-        <div className="icon">
-        <FaSearch/>
-        </div>
+       
         {
           <div className="buscador-container">
             <input
@@ -30,6 +28,9 @@ const Buscador = () => {
             />
           </div>
         }
+         <div className="icon">
+        <FaSearch/>
+        </div>
       </div>
     </>
   );
