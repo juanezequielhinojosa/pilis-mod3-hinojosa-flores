@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
-import { ClimasContext } from "../../contexts/ClimasContext";
+import { UbicacionesContext } from "../../contexts/UbicacionesContext";
 //import { SecionContext } from "../../context/SecionContext";
 import logo from "../../assets/logo.jpg";
 import "./Navegacion.css";
@@ -10,7 +10,7 @@ import swal from "sweetalert";
 
 const Navegacion = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
-  const { listaClimas, setListaClimas } = useContext(ClimasContext);
+  const { listaUbicaciones, setListaUbicaciones } = useContext(UbicacionesContext);
   const [listaSeciones, setListaSeciones] = useState([]);
   const [contador, setContador] = useState(1);
   useEffect(() => {
@@ -22,10 +22,10 @@ const Navegacion = () => {
         console.log(listaSeciones);
         if (listaSeciones.name == currentUser.username) {
           console.log(listaSeciones.ubicaciones);
-          setListaClimas(listaSeciones.ubicaciones);
+          setListaUbicaciones(listaSeciones.ubicaciones);
         }
       } else {
-        // setListaClimas(listaPredefinida)
+        // setListaUbicaciones(listaPredefinida)
       }
     }
   }, [currentUser]);
@@ -34,13 +34,13 @@ const Navegacion = () => {
     const informacionDeUsuario = {
       id: contador,
       name: currentUser.username,
-      ubicaciones: listaClimas,
+      ubicaciones: listaUbicaciones,
     };
     console.log(informacionDeUsuario);
     setContador(contador + 1);
     setListaSeciones(informacionDeUsuario);
     setCurrentUser(null);
-    setListaClimas(listaPredefinida);
+    setListaUbicaciones(listaPredefinida);
     console.log(listaSeciones);
   };
   const Alerta = () => {
@@ -58,7 +58,7 @@ const Navegacion = () => {
         </Link>
         <div className="nav-links-container">
           {currentUser ? (
-            <Link className="nav-link" to="/clima/create">
+            <Link className="nav-link" to="/ubicacion/create">
               Nueva Ciudad{" "}
             </Link>
           ) : (

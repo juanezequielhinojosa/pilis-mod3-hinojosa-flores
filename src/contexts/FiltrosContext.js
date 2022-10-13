@@ -8,7 +8,6 @@ export const FiltrosContext = createContext({
 export const FiltrosProvider = ({ children }) => {
   const [filters, setFilters] = useState({
     searchField: '',
-   // tagFilter: []
   });
   const value = { filters, setFilters };
 

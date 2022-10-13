@@ -1,3 +1,4 @@
+//LISTA QUE SE IMPLEMENTA PARA CARGAR UBICACIONES PREDEFINIDA
 export const listaPredefinida = [
   {
     id: 1,

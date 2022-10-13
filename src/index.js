@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from "./contexts/UserContext";
-import { ClimasProvider } from "./contexts/ClimasContext";
+import { UbicacionesProvider } from "./contexts/UbicacionesContext";
 import { IdProvider } from "./contexts/IdContext";
 import { FiltrosProvider } from "./contexts/FiltrosContext";
 
@@ -13,13 +13,13 @@ root.render(
   // <React.StrictMode>
   <BrowserRouter>
     <UserProvider>
-      <ClimasProvider>
+      <UbicacionesProvider>
         <IdProvider>
           <FiltrosProvider>
               <App /> 
           </FiltrosProvider>
         </IdProvider>
-      </ClimasProvider>
+      </UbicacionesProvider>
     </UserProvider>
   </BrowserRouter>
   // </React.StrictMode>

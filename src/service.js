@@ -1,3 +1,4 @@
+//ESTE SERVICIO PERMITE LA LLAMADA A LA API
 export const getClima = async (latitud,longitud) => {
   try {
 

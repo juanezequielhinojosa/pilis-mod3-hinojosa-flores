@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
 import "./Login.css";
 
+//ESTE COMPONENTE PERMITE AL USUARIO REGISTRARSE EN LA APLICACION PARA PODER AGREGAR UBICACIONES
 const Login = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { setCurrentUser } = useContext(UserContext);
   const {
     register,
     handleSubmit,
@@ -14,10 +15,9 @@ const Login = () => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    localStorage.setItem("currentUser", JSON.stringify(data));
+    //localStorage.setItem("currentUser", JSON.stringify(data));
     setCurrentUser(data);
-    console.log(data);
-    console.log(currentUser);
+    // console.log(data);
     navigate("/");
   };
 

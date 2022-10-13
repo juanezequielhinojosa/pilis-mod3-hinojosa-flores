@@ -1,18 +1,19 @@
-import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getClima } from "../../service";
-import { ClimasContext } from "../../contexts/ClimasContext";
+import { UbicacionesContext } from "../../contexts/UbicacionesContext";
 import swal from "sweetalert";
 import "./Clima.css";
 
-const Clima = ({ clima }) => {
+const Clima = ({ ubicacion }) => {
   const [items, setItems] = useState({});
   const [datos, setDatos] = useState({});
-  const { listaClimas, setListaClimas } = useContext(ClimasContext);
-  const { id, name, latitud, longitud } = clima;
+  const { listaUbicaciones, setListaUbicaciones } = useContext(UbicacionesContext);
+  const { id, name, latitud, longitud } = ubicacion;
   const { temperature, windspeed } = datos;
+
+  //AQUI SE HACE LA LLAMADA A LA API
   useEffect(() => {
     getClima(latitud, longitud)
       .then((data) => {
@@ -22,7 +23,9 @@ const Clima = ({ clima }) => {
       .catch((err) => console.log(err));
   }, []);
   console.log(datos);
-  const eliminarTarjeta = (id) => {
+
+  //ESTA FUNCION PERMITE ELIMINAR UNA UBICACION DE LA LISTA
+  const eliminarUbicacion = (id) => {
     swal({
       title: "Eliminar",
       text: "Estas seguro de eliminar esta ubicacion?",
@@ -30,9 +33,9 @@ const Clima = ({ clima }) => {
       buttons: ["No", "Si"],
     }).then((respuesta) => {
       if (respuesta) {
-        const listaActualizada = listaClimas.filter((clima) => clima.id !== id);
-        setListaClimas(listaActualizada);
-        // setListaClimas(listaClimas.filter((clima) => clima.id !== id));
+        const listaActualizada = listaUbicaciones.filter((ubicacion) => ubicacion.id !== id);
+        setListaUbicaciones(listaActualizada);
+        // setListaUbicaciones(listaUbicaciones.filter((ubicacion) => ubicacion.id !== id));
         swal({ text: "Ubicacion eliminada con exito", icon: "success" });
       }
     });
@@ -51,9 +54,9 @@ const Clima = ({ clima }) => {
       </div>
 
       <div className='fav'>
-      <FaTrashAlt onClick={() => eliminarTarjeta(id)}/>
+      <FaTrashAlt onClick={() => eliminarUbicacion(id)}/>
       {/* <button onClick={() => eliminarTarjeta(id)}>Eliminar</button> */}
-      <Link className="btn-see-more" to={`/clima/${id}`}>
+      <Link className="btn-see-more" to={`/ubicacion/${id}`}>
         Ver más
       </Link>
       </div>
