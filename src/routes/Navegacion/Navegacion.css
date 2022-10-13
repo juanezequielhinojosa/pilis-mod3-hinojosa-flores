@@ -8,12 +8,13 @@
     /* padding: 0 25px 0 25px; */
   }
   .logo-container {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
+    margin-left: 90px;
   }
   
   .logo {
-    height: 100px;
+    height: 150px;
     width: auto;
   }
   
