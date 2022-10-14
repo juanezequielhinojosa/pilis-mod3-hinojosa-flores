@@ -26,7 +26,7 @@ const ClimaDisplay = () => {
   console.log(datos);
   return (
     <div className="contenedor-principal">
-      <img src={u.imagen} alt="" />
+      <img src={u.imagen} alt="img ciudad" />
 
       <div className="contendor-texto">
         <div className="contendor-datos">

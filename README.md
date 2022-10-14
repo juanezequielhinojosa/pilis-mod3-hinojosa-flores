@@ -1,6 +1,6 @@
 # Proyecto Final de Modulo 3: React :rocket:
 
-:Alumnos: **Juan Gariel Flores - Juan Ezequiel Hinojosa**
+ **Alumnos: Juan Gariel Flores - Juan Ezequiel Hinojosa**
 
 ## Desarrollo 
 Este es el proyecto final del módulo 3 , el cual consiste en crear una interfaz de usuario implementando la librería de React.
@@ -15,7 +15,7 @@ Como puntos adicionales podemos mencionar los siguientes:
 - El usuario deberá loguearse para generar una lista personalizada de ubicaciones.
 - Además al crear una ubicación, podrá agregar una imagen o postal de la ciudad (indicando la url de la imagen)
 - El usuario contara con una barra de búsqueda para facilitar su navegación, entre todas las ubicaciones generadas.
-- Al cerrar sesión la lista personalizada se almacena es su local storage la cual será reutilizada al  - - iniciar sesión nuevamente
+- Al cerrar sesión la lista personalizada se almacena es su local storage la cual será reutilizada al iniciar secion nuevamente
 
 Esperamos que el proyecto sea de su agrado , saludos. 
 
