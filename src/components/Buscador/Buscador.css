@@ -1,0 +1,38 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buscador-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.buscador {
+  width: 400px;
+  height: 44px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+input{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.icon {
+  background-color: #fbff12;
+  font-size: 30px;
+  padding: 8px;
+  border-radius: 0px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: none;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
