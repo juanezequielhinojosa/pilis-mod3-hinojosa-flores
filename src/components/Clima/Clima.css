@@ -1,80 +1,87 @@
 .clima-container {
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow 0.2s ease;
-    border-radius: 0px 20px 0px 20px;
-    padding: 25px;
-    border: 1px solid grey;
-    background-color: #06d6a0;
-  }
-  .clima-container:hover {
-    box-shadow: 15px 15px 2px 1px #ffc43d;
-    border: 2px solid #ef476f;
-  }
-  
-  .clima {
-    display: flex;
-    flex-direction: column;
-    background-color: #1b9aaa;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease;
   border-radius: 0px 20px 0px 20px;
-  border: 0.5px solid grey;
-  }
-  
- 
-  .color {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    height: 50px;
-    cursor: pointer;
-  }
+  padding: 25px;
+  font-weight: lighter;
+  background-color: #0c0f0a;
+}
+.clima-container:hover {
+  box-shadow: 15px 15px 2px 1px #ff206e;
+  border: 2px solid #ff206e;
+}
 
-  
-  
+.clima {
+  display: flex;
+  flex-direction: column;
+  background-color: #0c0f0a;
+  color: #fbff12;
+  border-radius: 0px 20px 0px 20px;
+  border: 0.5px solid #fbff12;
+}
 
-  h1{
-    margin: 15px;
-  }
+.color {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  height: 50px;
+  cursor: pointer;
+}
 
-  h2{
-    margin: 10px;
-  }
-  
-  
-  h3 {
-    margin: 10px;
-  }
-  
-  
-  
-  .fav{
-    align-items: center;
-    margin-top:30px;
-    justify-content: space-between;
-  }
-  
-  .fav:hover {
-    cursor: pointer;
-  }
-  
-  
-  .btn-see-more {
-    text-decoration: none;
-    border: 1px solid black;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    color: #000;
-    margin-left: 30px;
-    background-color: #fff;
-  }
-  
-  .btn-see-more:hover {
-    cursor: pointer;
-    background-color: #5CB8E4;
-    color: black;
-    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
-  }
+span {
+  color: white;
+}
 
-  
+h1 {
+  margin: 15px;
+  color: white;
+}
+
+h2 {
+  margin: 5px;
+}
+
+h3 {
+  margin: 5px;
+}
+
+.iconos {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.iconos:hover {
+  cursor: pointer;
+}
+.trash-icon:hover {
+  color: red;
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #000;
+  margin-left: 30px;
+  background-color: #fbff12;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #ff206e;
+  color: white;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ff206e;
+}
+.trash-icon {
+  color: aliceblue;
+  width: 50px;
+  font-size: 40px;
+}

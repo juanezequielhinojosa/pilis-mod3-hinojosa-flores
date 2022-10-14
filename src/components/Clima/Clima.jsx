@@ -9,7 +9,8 @@ import "./Clima.css";
 const Clima = ({ ubicacion }) => {
   const [items, setItems] = useState({});
   const [datos, setDatos] = useState({});
-  const { listaUbicaciones, setListaUbicaciones } = useContext(UbicacionesContext);
+  const { listaUbicaciones, setListaUbicaciones } =
+    useContext(UbicacionesContext);
   const { id, name, latitud, longitud } = ubicacion;
   const { temperature, windspeed } = datos;
 
@@ -33,7 +34,9 @@ const Clima = ({ ubicacion }) => {
       buttons: ["No", "Si"],
     }).then((respuesta) => {
       if (respuesta) {
-        const listaActualizada = listaUbicaciones.filter((ubicacion) => ubicacion.id !== id);
+        const listaActualizada = listaUbicaciones.filter(
+          (ubicacion) => ubicacion.id !== id
+        );
         setListaUbicaciones(listaActualizada);
         // setListaUbicaciones(listaUbicaciones.filter((ubicacion) => ubicacion.id !== id));
         swal({ text: "Ubicacion eliminada con exito", icon: "success" });
@@ -42,22 +45,32 @@ const Clima = ({ ubicacion }) => {
   };
 
   return (
-    
-    <div className='clima-container'>
-      <div className='clima'>
-      <h1>{name}</h1>     
-      <h2>Temp: {temperature} °C</h2>
-      <h3>Vel. viento: {windspeed} Km/h</h3>
-      <h3>Lat: {items.latitude}</h3>
-      <h3>Long: {items.longitude}</h3>
+    <div className="clima-container">
+      <div className="clima">
+        <h1>{name}</h1>
+        <h3>
+          Temp: <span>{temperature}°C</span>{" "}
+        </h3>
+        <h3>
+          Vel. viento: <span>{windspeed} Km/h</span>{" "}
+        </h3>
+        <h3>
+          Lat: <span>{items.latitude}</span>{" "}
+        </h3>
+        <h3>
+          Long: <span>{items.longitude}</span>{" "}
+        </h3>
       </div>
 
-      <div className='fav'>
-      <FaTrashAlt onClick={() => eliminarUbicacion(id)}/>
-      {/* <button onClick={() => eliminarTarjeta(id)}>Eliminar</button> */}
-      <Link className="btn-see-more" to={`/ubicacion/${id}`}>
-        Ver más
-      </Link>
+      <div className="iconos">
+        <Link className="btn" to={`/ubicacion/${id}`}>
+          Ver más
+        </Link>
+        <FaTrashAlt
+          className="trash-icon"
+          onClick={() => eliminarUbicacion(id)}
+        />
+        {/* <button onClick={() => eliminarTarjeta(id)}>Eliminar</button> */}
       </div>
     </div>
   );
