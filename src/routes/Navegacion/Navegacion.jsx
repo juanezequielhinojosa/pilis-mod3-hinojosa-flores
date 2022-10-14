@@ -59,11 +59,11 @@ const Navegacion = () => {
           <h4>
           {currentUser ? (
             <Link className="nav-link" to="/ubicacion/create">
-              Nueva Ciudad{" "}
+              Agregar Ciudad{" "}
             </Link>
           ) : (
             <span className="nav-link" onClick={() => Alerta()}>
-              Agregar ciudad
+              Agregar Ciudad
             </span>
           )}
           {currentUser ? (

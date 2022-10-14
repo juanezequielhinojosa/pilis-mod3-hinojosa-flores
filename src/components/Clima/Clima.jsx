@@ -70,7 +70,6 @@ const Clima = ({ ubicacion }) => {
           className="trash-icon"
           onClick={() => eliminarUbicacion(id)}
         />
-        {/* <button onClick={() => eliminarTarjeta(id)}>Eliminar</button> */}
       </div>
     </div>
   );

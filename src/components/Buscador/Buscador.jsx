@@ -7,11 +7,11 @@ import "./Buscador.css";
 const Buscador = () => {
   const [busqueda, setBusqueda] = useState("");
   const { setFilters } = useContext(FiltrosContext);
-  
+
   //EL COMPONENTE BUSQUEDA ALTERA EL ESTADO GLOBAL DEL FILTRO
   const handleChange = (e) => {
     setBusqueda(e.target.value);
-   // console.log(e.target.value);
+    // console.log(e.target.value);
     setFilters({ searchField: e.target.value });
   };
   return (
@@ -25,8 +25,6 @@ const Buscador = () => {
         />
         <FaSearch className="icon" />
       </div>
-
-      
     </div>
   );
 };
