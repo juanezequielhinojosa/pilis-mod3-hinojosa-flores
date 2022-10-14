@@ -67,8 +67,8 @@ const Navegacion = () => {
             </span>
           )}
           {currentUser ? (
-            <span className="nav-link" onClick={handleSignOut}>
-              <Link className="nav-link close" to="/">
+            <span onClick={handleSignOut}>
+              <Link className="nav-link" to="/">
                 Cerrar sesión
               </Link>
             </span>
