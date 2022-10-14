@@ -33,10 +33,19 @@ const ClimaDisplay = () => {
           <h1 className="nombre-ciudad">
             <strong>{u.name}</strong>
           </h1>
-          <p>Temp: {datos.temperature} °C</p>
-          <p>Vel. viento: {datos.windspeed} Km/h</p>
-          <p>Long:{items.latitude}</p>
-          <p> "Lat: {items.longitude}" </p>
+          <p>
+            Temp: <span>{datos.temperature} °C</span>{" "}
+          </p>
+          <p>
+            Vel. viento: <span>{datos.windspeed} Km/h</span>{" "}
+          </p>
+          <p>
+            Long: <span>{items.latitude}</span>
+          </p>
+          <p>
+            {" "}
+            Lat: <span> {items.longitude}</span>{" "}
+          </p>
         </div>
         <Link className="btn-back" to="/">
           Volver
