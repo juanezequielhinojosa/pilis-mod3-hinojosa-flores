@@ -1,18 +1,1 @@
-header {
-    padding: 50px;
-  }
-  
-  .main-container {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  header {
-    padding: 0px;
-  }
-
-  html{
-    background: white;  /* fallback for old browsers */
-
-  }
 

@@ -2,7 +2,7 @@
 export const listaPredefinida = [
   {
     id: 1,
-    name: "Nueva York",
+    name: "New York",
     latitud: 40.7127753,
     longitud: -74.0059728,
     imagen:
