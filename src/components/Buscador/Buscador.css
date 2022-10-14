@@ -1,37 +1,38 @@
-
-
-.main-container{
-    padding: 10 40px 10 25px;
-    position: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-      
-    padding-top: 6px;
-    align-content: center;
-    align-items: center;
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.buscador-container{
-    width: 200px ;
-    max-width: 100%;
-    max-height: 100%;
-    justify-content: center;
-	position: relative;  
-    margin-left: auto;
+.buscador-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
-.buscador{
-    width: 400px ;
-    height: 40px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+.buscador {
+  width: 400px;
+  height: 44px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
 }
 
-.icon{
-    margin-right: auto;
-    margin-left: 160px;
-    margin-bottom: 7px;
-    z-index: 100;
-    width: 50px;
-    height: 10px;
+input{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.icon {
+  background-color: #fbff12;
+  font-size: 30px;
+  padding: 8px;
+  border-radius: 0px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: none;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
 }

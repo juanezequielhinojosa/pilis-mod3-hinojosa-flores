@@ -15,24 +15,19 @@ const Buscador = () => {
     setFilters({ searchField: e.target.value });
   };
   return (
-    <>
-      <div className="main-container">
-       
-        {
-          <div className="buscador-container">
-            <input
-              className="buscador"
-              value={busqueda}
-              placeholder="  Ingrese el nombre de la ciudad"
-              onChange={handleChange}
-            />
-          </div>
-        }
-         <div className="icon">
-        <FaSearch/>
-        </div>
+    <div className="main-container">
+      <div className="buscador-container">
+        <input
+          className="buscador"
+          value={busqueda}
+          placeholder="  Ingrese el nombre de la ciudad"
+          onChange={handleChange}
+        />
+        <FaSearch className="icon" />
       </div>
-    </>
+
+      
+    </div>
   );
 };
 export default Buscador;
