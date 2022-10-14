@@ -1,62 +1,65 @@
 .sign-in-container, .sign-in-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  .form-container{
-    background-color: #5c87e4;
-    padding: 50px;
-    border-radius: 20px ;
-    box-shadow: 0 3px 13px 1px black;
-  }
-  
-  .input-form {
-    background: none;
-    background-color: none;
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 0px;
-    border-bottom: 1px solid #000;
-   margin-top: 30px;
-  }
-  
-  .input-form:focus {
-    outline: none;
-    background-color: none;
-  }
-  
-  .btn-form {
-   
-    font-weight: lighter;
-    min-width: 300px;
-    width: auto;
-    height: 50px;
-    border-radius: 5px;
-    letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: 0 35px 0 35px;
-    font-size: 20px;
-    background-color: rgb(14, 16, 19);
-    color: white;
-    font-weight: bolder;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    border: 1px solid black;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: none;
+}
+.form-container{
+  background-color: #0c0f0a;
+  padding: 50px;
+  border-radius: 20px ;
+  box-shadow: 0 3px 13px 1px black;
+}
+h2{
+  color: white;
+}
 
-  .btn-form:hover{
-    cursor: pointer;
-    background-color: white;
-    color:rgb(14, 16, 19);
-    font-weight: bolder;
-    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
-    border: none;
-  }
-  
+.input-form {
+  color: white;
+  background: none;
+  background-color: none;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #fbff12;
+ margin-top: 30px;
+}
+
+.input-form:focus {
+  outline: none;
+  background-color: #0c0f0a;
+}
+
+.btn-form {
+ 
+  font-weight: lighter;
+  min-width: 300px;
+  width: auto;
+  height: 50px;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 20px;
+  background-color: #fbff12;
+  color: #0c0f0a;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  border: 1px solid black;
+}
+
+.btn-form:hover{
+  cursor: pointer;
+  background-color: #ff206e;
+  color:white;
+  font-weight: bolder;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+}

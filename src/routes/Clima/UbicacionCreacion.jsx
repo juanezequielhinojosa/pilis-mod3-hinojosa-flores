@@ -40,7 +40,7 @@ const UbicacionCreacion = () => {
   return (
     <div className="main-container">
       <div className="form-container">
-      <h1>Crea una nueva Ubicacion</h1>
+      <h1>Crear nueva Ubicacion</h1>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-name-form"
